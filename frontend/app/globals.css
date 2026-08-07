@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-plex: 'IBM Plex Sans', sans-serif;
+}
+
+html {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* -------------------------------------------------------------
+   LIGHT MODE DEFAULTS (Pure White #FFFFFF & High Readability)
+------------------------------------------------------------- */
+body {
+  color: #111111;
+  background-color: #ffffff;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Pure Light Grid Pattern */
+.bg-grid-overlay {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+}
+
+/* Light Glass Cards */
+.glass-card-premium {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+.glass-card-premium-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-premium-hover:hover {
+  background: #ffffff;
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.08), 0 10px 20px -5px rgba(15, 23, 42, 0.04);
+  transform: translateY(-3px);
+}
+
+/* Headline styles */
+.space-headline {
+  font-family: var(--font-space);
+  letter-spacing: -0.025em;
+}
+
+.plex-mono {
+  font-family: var(--font-plex);
+}
+
+/* Interactive Glow Buttons */
+.glow-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.glow-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.glow-btn:hover::after {
+  left: 120%;
+}
+
+/* -------------------------------------------------------------
+   TRUE FULL DARK MODE OVERRIDES (Linear, Vercel & ChatGPT OLED Style)
+------------------------------------------------------------- */
+html.dark body {
+  color: #ffffff;
+  background-color: #050505;
+}
+
+html.dark .bg-grid-overlay {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+html.dark .glass-card-premium {
+  background: #111111;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid #222222;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+html.dark .glass-card-premium-hover:hover {
+  background: #161616;
+  border-color: #333333;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(99, 102, 241, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Soft Radial Background Blobs */
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  opacity: 0.25;
+  transition: all 1s ease-in-out;
+}
+
+html.dark .glow-blob {
+  opacity: 0.15;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: slow-spin 20s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #222222;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
