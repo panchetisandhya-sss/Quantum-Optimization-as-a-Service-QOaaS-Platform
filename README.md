@@ -3,8 +3,32 @@
 A production-quality enterprise SaaS platform that enables business users (HR managers, Portfolio Analysts, Operations teams) to run complex optimizations (Portfolio Allocation and Staffing Schedules) using quantum-classical hybrid algorithms without needing to know any quantum physics, circuits, QUBO, or coding.
 
 ---
+## Team Member Contributions
 
-## System Architecture
+Mahati Kanigiri  
+Email: [mahathikanigiri@gmail.com](mailto:mahathikanigiri@gmail.com)
+
+Contributed to QUBO formulation, mathematical modeling, and technical research on quantum optimization methods and their application to the QOaaS platform.
+
+Sai Krishna Thopul  
+Email: [saikrishnathopula36@gmail.com](mailto:saikrishnathopula36@gmail.com)
+
+Contributed to data analysis, documentation, and presentation development, including organizing project findings and effectively communicating the platform’s objectives, methodology, and results. Affiliated with Cyient.
+
+Sandhya Pancheti  
+Email: [panchetisandhya@gmail.com](mailto:panchetisandhya@gmail.com)
+
+Led the coding, software development, and technical implementation of the QOaaS platform, including platform architecture, feature development, optimization workflow integration, and implementation of the hybrid quantum–classical execution pipeline.
+
+## Project Resources
+
+Project Demonstration Video
+
+[Watch the QOaaS Platform Demonstration Video](https://drive.google.com/file/d/1yTeK4QqZv4-ke8y-d9WOjnqyqcoWVNyQ/view?usp=drivesdk)
+
+Project Documentation
+
+[View the QOaaS Platform Documentation](https://drive.google.com/file/d/1ZMbem-nRARMnp_MwGljoXLiCYwpIgnbm/view?usp=drivesdk)
 
 ```mermaid
 graph TD
